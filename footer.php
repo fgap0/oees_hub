@@ -3,7 +3,7 @@
 /**
  * The template for displaying the footer
  *
- * Contains the closing of the #content div and all content after.
+ * Contains the closing of the #content div and all content afte r.
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
