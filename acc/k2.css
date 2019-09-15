@@ -1,0 +1,101 @@
+body, 
+.site-header, 
+.site-footer, 
+.header-nav, 
+.site-header .acc, 
+.posts .post-box, 
+.site-header .acc .czcionka .c-all #c1,
+.site-header .acc .czcionka .c-all #c2,
+.site-header .acc .czcionka .c-all #c3{
+  background:#000;
+  color:#fff;
+}
+
+
+
+
+img{
+  opacity:0.5;
+  transition:opacity 0.5s;
+}
+img:hover{
+  opacity:1;
+}
+
+.site-header .acc,
+.site-header .acc .kontrast .k-all #k1,
+.site-header .acc .kontrast .k-all #k2,
+.site-header .acc .kontrast .k-all #k3,
+.site-header .acc .kontrast .k-all #k4{
+  border:1px solid #fff;
+}
+
+.posts .post-box{
+  border-top:5px solid #fff;
+}
+
+.posts .post-box .bottom .button{
+  border:1px solid #fff;
+  color:#fff;
+}
+
+.main h1:before{
+  background:#fff;
+}
+
+.przyciski .wrapper .przycisk{
+  background:#000;
+  border:3px solid #fff;
+  color:#fff;
+}
+
+#menu_button{
+  background:#000;
+  color:#fff;
+  border:1px solid #fff;
+}
+
+.popup-ue{
+  background:#222;
+  color:#fff;
+  border-top: 2px solid #000;
+}
+
+#oferta{
+  background:#000;
+  color:#fff;
+}
+
+#about{
+  color:#fff;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+  color:#fff;
+}
+
+#about hr{
+ border-top:3px solid #fff;
+}
+
+#about .wrapper .btn-s{
+  background:#000;
+  color:#fff;
+}
+
+#slider .slider-button{
+  background:#000;
+
+}
+
+#timeline{
+  background:#000;
+}
+
+#idea .section-head h2{
+  color:#fff;
+}
+
+#idea .section-head hr{
+  border-color:#fff;
+}
