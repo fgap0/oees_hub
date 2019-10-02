@@ -12,6 +12,10 @@ body {
 	color: $c-main;
 }
 
+#page{
+	min-height:800px;
+}
+
 .post,
 .page {
 	margin: 0;
@@ -42,6 +46,7 @@ h4 {
 	font-size: 1.9rem;
 	color: $c-main;
 }
+
 
 .site-header {
 	height: 130px;
@@ -694,7 +699,6 @@ h4 {
     padding-top:60px;
 	padding-bottom:60px;
 	color:$c-sec;
-	min-height:500px;
 	h2{
 		color:$c-sec;
 	}
