@@ -168,5 +168,16 @@
 				</style>
 			<?php } ?>
 
+			<?php if (!is_front_page()) { ?>
+				<style>
+.site-header{
+	position:static;
+	background:#0B1E2C;
+	margin-bottom:50px;
+	height:160px;
+}
+				</style>
+			<?php } ?>
+
 
 		</header><!-- #masthead -->

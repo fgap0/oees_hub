@@ -1,57 +1,59 @@
 
-$(document).ready(function () {
-    $('.slick-slider').slick({
-        autoplay: true,
-        autoplaySpeed: 4000,
-        arrows: false,
+if (document.querySelector('.slick-slider')) {
 
+    $(document).ready(function () {
+        $('.slick-slider').slick({
+            autoplay: true,
+            autoplaySpeed: 4000,
+            arrows: false,
+
+        });
     });
-});
 
-var popup_ue = new ScrollMagic.Controller();
+    var popup_ue = new ScrollMagic.Controller();
 
-var scene = new ScrollMagic.Scene({
-    triggerElement: 'window',
-    triggerHook: 0,
-    duration: 10,
-})
+    var scene = new ScrollMagic.Scene({
+        triggerElement: 'window',
+        triggerHook: 0,
+        duration: 10,
+    })
 
-    .setClassToggle('.popup-ue', 'popup-ue-show')
-    .addTo(popup_ue);
-
-
-var popup_ue_close = document.querySelector('.popup-ue-close');
-
-popup_ue_close.addEventListener('click', function () {
-
-    scene = scene.destroy(true);
-
-}, false);
+        .setClassToggle('.popup-ue', 'popup-ue-show')
+        .addTo(popup_ue);
 
 
-var slider_button = document.querySelector('.slider-button');
-var rekrutacja = document.getElementById('rekrutacja');
+    var popup_ue_close = document.querySelector('.popup-ue-close');
 
-slider_button.addEventListener('click', function () {
+    popup_ue_close.addEventListener('click', function () {
 
-    $("#rekrutacja").addClass("d-block");
-    setTimeout(function () {
-        $("#rekrutacja").addClass("opacity1");
-    }, 200);
+        scene = scene.destroy(true);
+
+    }, false);
 
 
-}, false);
+    var slider_button = document.querySelector('.slider-button');
+    var rekrutacja = document.getElementById('rekrutacja');
+
+    slider_button.addEventListener('click', function () {
+
+        $("#rekrutacja").addClass("d-block");
+        setTimeout(function () {
+            $("#rekrutacja").addClass("opacity1");
+        }, 200);
 
 
-rekrutacja.addEventListener('click', function () {
-    $("#rekrutacja").removeClass("opacity1");
-    setTimeout(function () {
-        $("#rekrutacja").removeClass("d-block");
-    }, 200);
-}, false);
+    }, false);
 
 
+    rekrutacja.addEventListener('click', function () {
+        $("#rekrutacja").removeClass("opacity1");
+        setTimeout(function () {
+            $("#rekrutacja").removeClass("d-block");
+        }, 200);
+    }, false);
 
+
+}
 
 
 
