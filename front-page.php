@@ -33,11 +33,11 @@ get_header();
     </section>
     <div id="rekrutacja">
         <div class="wrapper">
-            <a href="<?php the_field('rekrutacja_link_1'); ?>" class="rek-btn">
-                <div class="text"><?php the_field('rekrutacja_tekst_1'); ?></div>
+            <a href="#" class="rek-btn">
+                <div class="text">Rekrutacja 1</div>
             </a>
-            <a href="<?php the_field('rekrutacja_link_2'); ?>" class="rek-btn">
-                <div class="text"><?php the_field('rekrutacja_tekst_2'); ?></div>
+            <a href="#" class="rek-btn">
+                <div class="text">Rekrutacja 2</div>
             </a>
         </div>
     </div>
@@ -60,24 +60,24 @@ get_header();
             <div class="row">
                 <div class="col-12 col-md-7">
                     <hr />
-                    <h2><?php the_field('naglowek_-_lewy'); ?></h2>
+                    <h2>O projekcie</h2>
                     <div class="wrapper">
-                        <img src="<?php the_field('obrazek_-_lewy'); ?>" />
-                        <a class="btn-s" href="<?php the_field('link_-_lewy'); ?>">ZOBACZ WIĘCEJ</a>
+                        <img src="https://oees.pl/wp-content/uploads/2019/09/OEES_2019_slider_1369x674px_mapa_miejsc_v3.jpg" />
+                        <a class="btn-s" href="#">ZOBACZ WIĘCEJ</a>
                     </div>
                     <p>
-                        <?php the_field('opis_-_lewy'); ?>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ratione maxime excepturi neque iste eligendi veniam repellat voluptate similique, debitis sed minus quos libero et ducimus doloremque reiciendis ipsa obcaecati.
                     </p>
                 </div>
                 <div class="col-12 col-md-5">
                     <hr style="margin-top:100px;" />
-                    <h2><?php the_field('naglowek_-_prawy'); ?></h2>
+                    <h2>Aktualności</h2>
                     <div class="wrapper">
-                        <img src="<?php the_field('obrazek_-_prawy'); ?>" />
-                        <a class="btn-s" href="<?php the_field('link_-_prawy'); ?>">ZOBACZ WIĘCEJ</a>
+                        <img src="http://oees.pl/wp-content/uploads/2019/05/MOEEH-promocja-firm-idei_www2-1.png" />
+                        <a class="btn-s" href="#">ZOBACZ WIĘCEJ</a>
                     </div>
                     <p>
-                        <?php the_field('opis_-_prawy'); ?>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit laudantium quis voluptate veritatis architecto! Eum ratione maxime excepturi neque iste eligendi veniam repellat voluptate similique.
                     </p>
                 </div>
             </div>
@@ -110,33 +110,33 @@ get_header();
             </div>
             <div class="row">
                 <div class="col-12 col-md-4">
-                    <a href="#" class="wrapper">
+                    <a href="<?php the_field('oferujemy1_link'); ?>" class="wrapper">
                         <div class="text-wrap">
                             <div class="text">
-                                Warsztaty i misje gospodarcze
+                                <?php the_field('oferujemy1_tekst'); ?>
                             </div>
                         </div>
-                        <img src="https://oees.pl/wp-content/uploads/2019/09/OEES_2019_slider_1369x674px_mapa_miejsc_v3.jpg" />
+                        <img src="<?php the_field('oferujemy1_zdjecie'); ?>" />
                     </a>
                 </div>
                 <div class="col-12 col-md-4">
-                    <a href="#" class="wrapper">
+                    <a href="<?php the_field('oferujemy2_link'); ?>" class="wrapper">
                         <div class="text-wrap">
                             <div class="text">
-                                Warsztaty i targi branżowe
+                                <?php the_field('oferujemy2_tekst'); ?>
                             </div>
                         </div>
-                        <img src="http://oees.pl/wp-content/uploads/2019/05/MOEEH-promocja-firm-idei_www2-1.png" />
+                        <img src="<?php the_field('oferujemy2_zdjecie'); ?>" />
                     </a>
                 </div>
                 <div class="col-12 col-md-4">
-                    <a href="#" class="wrapper">
+                    <a href="<?php the_field('oferujemy3_link'); ?>" class="wrapper">
                         <div class="text-wrap">
                             <div class="text">
-                                Prezentacje na konferencje
+                                <?php the_field('oferujemy3_tekst'); ?>
                             </div>
                         </div>
-                        <img src="https://oees.pl/wp-content/uploads/2019/09/OEES_2019_slider_1369x674px_mapa_miejsc_v3.jpg" />
+                        <img src="<?php the_field('oferujemy3_zdjecie'); ?>" />
                     </a>
                 </div>
             </div>
@@ -172,29 +172,6 @@ get_header();
             </div>
         </div>
     </section>
-
-
-
-
-    <?php if (get_field('for_obrazek2')) { ?>
-
-<section id="for2">
-    <div class="container-fluid">
-        <div class="row">
-
-            <img src="<?php the_field('for_obrazek2'); ?>" />
-
-        </div>
-    </div>
-</section>
-<?php } ?>
-
-
-
-
-
-
-
 
 
     <script type="text/javascript" src="//unpkg.com/vis-timeline@latest/dist/vis-timeline-graph2d.min.js"></script>
