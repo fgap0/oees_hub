@@ -13,16 +13,11 @@
 				</div>
 			</div>
 			<div class="row box">
-				<div class="col-6 left">
-	a
+				<div class="col-12 col-md-6 left">
+					<?php the_field('kolumna_lewa'); ?>
 				</div>
-				<div class="col-6 right">
-				Dotrzesz do nas liniami MPK 2, 124, 184, 424, 484 na przystanek Cmentarz Rakowicki, a z niego do naszego biura dojdziesz w 3 minuty.
-
-
-
-	Przed naszym biurem zaparkujesz swój samochód na parkingu przy ulicy. Pamiętaj, aby opłacić swój postój
-	w pobliskim parkomacie.
+				<div class="col-12 col-md-6 right">
+					<?php the_field('kolumna_prawa'); ?>
 				</div>
 			</div>
 

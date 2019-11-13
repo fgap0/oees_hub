@@ -285,7 +285,7 @@ get_header();
                 <div class="col-12">
                     <div class="wrapper">
                         <a href="<?php the_field('lewy_-_odnosnik');?>" target="_blank"><img src="<?php the_field('lewy_-_obrazek');?>" /></a>
-                        <a href="http://warsztat.org.pl/" target="_blank"><img src="<?php echo $img ?>/img/WIS_poziom.jpg" /></a>
+                        <a href="<?php the_field('prawy_-_odnosnik');?>" target="_blank"><img src="<?php the_field('prawy_-_obrazek');?>" /></a>
                     </div>
                 </div>
             </div>
