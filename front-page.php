@@ -145,21 +145,16 @@ get_header();
 
     <section id="idea">
         <div class="container">
-            <div class="row">
-                <div class="col-12 section-head">
-                    <hr />
-                    <h2>Idea pojęć</h2>
-                </div>
-            </div>
-            <div class="row">
+
+            <div class="row" style="padding-top:100px; padding-bottom:40px;">
 
                 <?php
                 if (have_rows('pojecie')) :
                     while (have_rows('pojecie')) : the_row(); ?>
 
                         <div class="col-12 col-md-6" style="margin-bottom:40px;">
-                            <img src="<?php the_sub_field('idea_obrazek') ?>" />
-                            <h3><?php the_sub_field('idea_naglowek') ?></h3>
+                            <a href="<?php the_sub_field('idea_link') ?>"><img src="<?php the_sub_field('idea_obrazek') ?>" /></a>
+                            <a href="<?php the_sub_field('idea_link') ?>"><h3><?php the_sub_field('idea_naglowek') ?></h3></a>
                             <?php the_sub_field('idea_tekst') ?>
                         </div>
 
@@ -289,7 +284,7 @@ get_header();
             <div class="row">
                 <div class="col-12">
                     <div class="wrapper">
-                        <a href="http://fundacjagap.pl" target="_blank"><img src="<?php echo $img ?>/img/fgap_logo.png" /></a>
+                        <a href="<?php the_field('lewy_-_odnosnik');?>" target="_blank"><img src="<?php the_field('lewy_-_obrazek');?>" /></a>
                         <a href="http://warsztat.org.pl/" target="_blank"><img src="<?php echo $img ?>/img/WIS_poziom.jpg" /></a>
                     </div>
                 </div>

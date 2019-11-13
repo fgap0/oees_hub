@@ -13,7 +13,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-12">
+				<div class="col-12 page-content">
 					<?php the_content(); ?>
 				</div>
 			</div>

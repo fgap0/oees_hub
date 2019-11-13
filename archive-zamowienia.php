@@ -20,7 +20,7 @@ get_header();
 	<div class="container con-sm">
 		<div class="row">
 			<div class="col-12">
-				<h1>Aktualności</h1>
+				<h1>Zamówienia</h1>
 			</div>
 		</div>
 	</div>
@@ -32,7 +32,7 @@ get_header();
 			<?php
 			$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 			$args = array(
-				'post_type'=>'post', // Your post type name
+				'post_type'=>'zamowienia', // Your post type name
 				'posts_per_page' => -1,
 				'paged' => $paged,
 			);

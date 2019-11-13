@@ -19,6 +19,7 @@ get_header();
 			<div class="row">
 				<div class="col-12">
 					<h1><?php the_title(); ?></h1>
+					<div class="date">Opublikowano: <b><?php the_date(); ?></b></div>
 				</div>
 			</div>
 			<div class="row post-thumbnail">
