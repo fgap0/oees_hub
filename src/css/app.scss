@@ -820,11 +820,9 @@ h4 {
 
 .kontakt{
 	p{
-		padding-top: 0px !important;
+		padding-top: 10px !important;
 	}
-	a{
-		color:#fff;
-	}
+
     .box{
         margin-top:60px;
         border: 1px solid #0B1E2C;
@@ -832,9 +830,15 @@ h4 {
     .left{
         padding:50px;
         background:#0B1E2C;
-        color:#fff;
+		color:#fff;
+		a{
+			color:#fff;
+		}
     }
     .right{
-        padding:50px;
+		padding:50px;
+		a{
+			color:#0b1e2c;
+		}
     }
 }
