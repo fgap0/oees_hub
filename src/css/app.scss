@@ -765,6 +765,10 @@ h4 {
 			font-weight: bold;
 			color:$c-sec;
 		}
+		.content{
+			max-height:80%;
+			overflow:hidden;
+		}
 		p {
 			font-size: 1.4rem;
 		}
@@ -841,4 +845,28 @@ h4 {
 			color:#0b1e2c;
 		}
     }
+}
+
+
+#logotypy-footer {
+	border-top: 1px solid rgba(11, 30, 44, 0.1);
+	.wrapper {
+		padding: 20px 15px;
+		.text {
+			font-size: 1.1rem;
+			text-align: center;
+		}
+		.logotypy {
+			padding-top: 15px;
+			display: flex;
+			justify-content: space-between;
+			img {
+				width: auto;
+				height: 25px;
+				@include md {
+					height: 65px;
+				}
+			}
+		}
+	}
 }

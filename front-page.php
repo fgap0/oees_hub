@@ -13,12 +13,16 @@ get_header();
                 while (have_rows('slider')) : the_row(); ?>
 
                     <div class="slide" style=" background-image:url('<?php the_sub_field('slider_obrazek'); ?>')">
-                        <div class="wrapper">
-                            <hr />
-                            <div class="text">
-                                <?php the_sub_field('slider_tekst'); ?>
+
+                        <?php if (get_sub_field('slider_tekst')) { ?>
+                            <div class="wrapper">
+                                <hr />
+                                <div class="text">
+                                    <?php the_sub_field('slider_tekst'); ?>
+                                </div>
                             </div>
-                        </div>
+                        <?php } ?>
+
                     </div>
 
             <?php
@@ -77,7 +81,7 @@ get_header();
                     </div>
                     <p>
                         <?php the_field('opis_-_prawy'); ?>
-                     </p>
+                    </p>
                 </div>
             </div>
         </div>
@@ -154,7 +158,9 @@ get_header();
 
                         <div class="col-12 col-md-6" style="margin-bottom:40px;">
                             <a href="<?php the_sub_field('idea_link') ?>"><img src="<?php the_sub_field('idea_obrazek') ?>" /></a>
-                            <a href="<?php the_sub_field('idea_link') ?>"><h3><?php the_sub_field('idea_naglowek') ?></h3></a>
+                            <a href="<?php the_sub_field('idea_link') ?>">
+                                <h3><?php the_sub_field('idea_naglowek') ?></h3>
+                            </a>
                             <?php the_sub_field('idea_tekst') ?>
                         </div>
 
@@ -284,8 +290,8 @@ get_header();
             <div class="row">
                 <div class="col-12">
                     <div class="wrapper">
-                        <a href="<?php the_field('lewy_-_odnosnik');?>" target="_blank"><img src="<?php the_field('lewy_-_obrazek');?>" /></a>
-                        <a href="<?php the_field('prawy_-_odnosnik');?>" target="_blank"><img src="<?php the_field('prawy_-_obrazek');?>" /></a>
+                        <a href="<?php the_field('lewy_-_odnosnik'); ?>" target="_blank"><img src="<?php the_field('lewy_-_obrazek'); ?>" /></a>
+                        <a href="<?php the_field('prawy_-_odnosnik'); ?>" target="_blank"><img src="<?php the_field('prawy_-_obrazek'); ?>" /></a>
                     </div>
                 </div>
             </div>
