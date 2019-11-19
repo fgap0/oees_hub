@@ -147,6 +147,20 @@ get_header();
     </section>
 
 
+    <?php if (get_field('for3_obrazek')) { ?>
+
+        <section id="for3">
+            <div class="container-fluid">
+                <div class="row">
+
+                    <img src="<?php the_field('for3_obrazek'); ?>" />
+
+                </div>
+            </div>
+        </section>
+    <?php } ?>
+
+
     <section id="idea">
         <div class="container">
 
