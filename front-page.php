@@ -238,7 +238,7 @@ get_header();
                                     <p><?php the_sub_field('t_opis'); ?></p>
                                 </div>
                             </div>
-                            <div class="bottom" style="background: <?php echo $t_kolor ?> ">
+                            <div class="bottom" id="bottom<?php echo $t; ?>" style="background: <?php echo $t_kolor ?> ">
                                 <div class="text">
                                     <?php the_sub_field('t_miejsce'); ?>
                                 </div>
@@ -251,6 +251,9 @@ get_header();
                         </div>
                         <div class="line" id="line<?php echo $t; ?>"></div>
                         <style>
+                            #bottom<?php echo $t; ?>:after{
+                                border-top: 30px solid <?php echo $t_kolor ?> !important;
+                            }
                             #line<?php echo $t - 1; ?> {
                                 background: <?php echo $t_kolor_b ?>;
                                 background: linear-gradient(90deg, <?php echo $t_kolor_b ?> 15%, <?php echo $t_kolor ?> 85%);
