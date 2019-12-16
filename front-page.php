@@ -250,7 +250,12 @@ get_header();
                             </div>
                         </div>
                         <div class="line" id="line<?php echo $t; ?>"></div>
-
+                        <style>
+                            #line<?php echo $t - 1; ?> {
+                                background: <?php echo $t_kolor_b ?>;
+                                background: linear-gradient(90deg, <?php echo $t_kolor_b ?> 15%, <?php echo $t_kolor ?> 85%);
+                            }
+                        </style>
                     </div>
 
 
