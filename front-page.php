@@ -227,7 +227,7 @@ get_header();
                     $t++;
                     $t_kolor_b = $t_kolor;
                     $t_kolor = get_sub_field('t_kolor');
-                    if(get_sub_field('t_glowny');){
+                    if(get_sub_field('t_glowny')){
                         $glowny = $t-1;
                     }
                     ?>
