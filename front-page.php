@@ -218,6 +218,7 @@ get_header();
         <div class="timeline-slider">
 
             <?php
+            $glowny=0;
             $t = 0;
             if (have_rows('timeline')) :
 
@@ -226,6 +227,9 @@ get_header();
                     $t++;
                     $t_kolor_b = $t_kolor;
                     $t_kolor = get_sub_field('t_kolor');
+                    if(get_sub_field('t_glowny');){
+                        $glowny = $t-1;
+                    }
                     ?>
 
 
@@ -280,7 +284,7 @@ get_header();
             $(document).ready(function() {
                 $('.timeline-slider').slick({
                     arrows: false,
-                    initialSlide: 3,
+                    initialSlide: <?php echo $glowny;?>,
                     slidesToShow: 1,
                     variableWidth: true,
                     infinite: false,
