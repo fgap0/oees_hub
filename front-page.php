@@ -280,7 +280,7 @@ get_header();
             $(document).ready(function() {
                 $('.timeline-slider').slick({
                     arrows: false,
-                    //initialSlide: 3,
+                    initialSlide: 3,
                     slidesToShow: 1,
                     variableWidth: true,
                     infinite: false,
