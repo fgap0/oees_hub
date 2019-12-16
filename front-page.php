@@ -204,10 +204,6 @@ get_header();
 
 
 
-    <script type="text/javascript" src="//unpkg.com/vis-timeline@latest/dist/vis-timeline-graph2d.min.js"></script>
-    <link href="//unpkg.com/vis-timeline@latest/dist/vis-timeline-graph2d.min.css" rel="stylesheet" type="text/css" />
-
-
 
     <section id="timeline">
         <div class="container">
@@ -218,74 +214,79 @@ get_header();
                 </div>
             </div>
         </div>
-        <div id="visualization"></div>
-        <script type="text/javascript">
-            // DOM element where the Timeline will be attached
-            var container = document.getElementById('visualization');
 
-            // Create a DataSet (allows two way data-binding)
-            var items = new vis.DataSet([
-                <?php
-                if (have_rows('harmonogram')) :
-                    $i = 1;
-                    while (have_rows('harmonogram')) : the_row();
-                        ?> {
-                            id: <?php echo $i ?>,
-                            content: '<a class="vis-custom" href="#"><div class="title"><?php echo the_sub_field('nazwa'); ?></div><div class="place"><?php echo the_sub_field('miejsce'); ?></div><div class="date"><?php echo the_sub_field('data'); ?></div></a>',
-                            start: '<?php echo the_sub_field('data'); ?>'
-                        },
+        <div class="timeline-slider">
 
-                <?php $i++;
-                    endwhile;
-
-                else :
+            <?php
+            $t = 0;
+            if (have_rows('timeline')) :
 
 
-                endif;
-
-                ?>
-            ]);
-
-
-
+                while (have_rows('timeline')) : the_row();
+                    $t++;
+                    $t_kolor_b = $t_kolor;
+                    $t_kolor = get_sub_field('t_kolor');
+                    ?>
 
 
-            // Configuration for the Timeline
+                    <div class="event">
+                        <a href="<?php the_sub_field('t_link'); ?>" class="info-box">
+                            <img src="<?php the_sub_field('t_obrazek'); ?>" />
+                            <div class="middle">
+                                <div class="text">
+                                    <h3><?php the_sub_field('t_naglowek'); ?></h3>
+                                    <p><?php the_sub_field('t_opis'); ?></p>
+                                </div>
+                            </div>
+                            <div class="bottom" style="background: <?php echo $t_kolor ?> ">
+                                <div class="text">
+                                    <?php the_sub_field('t_miejsce'); ?>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="circle">
+                            <div class="in">
+                                <?php the_sub_field('t_data'); ?>
+                            </div>
+                        </div>
+                        <div class="line" id="line<?php echo $t; ?>"></div>
+                    </div>
 
-            if ($(window).width() > 992) {
 
-                var options = {
-                    height: '300px',
-                    zoomable: false,
-                    start: '2018',
-                    end: '2020',
-                    min: '2017',
-                    max: '2023',
-                    showMinorLabels: false,
-                    timeAxis: {
-                        scale: 'month',
-                        step: 1
-                    }
-                };
-            } else {
-                var options = {
-                    height: '300px',
-                    zoomable: false,
-                    start: '2019',
-                    end: '2020',
-                    min: '2017',
-                    max: '2023',
-                    showMinorLabels: false,
-                    timeAxis: {
-                        scale: 'month',
-                        step: 1
-                    }
-                };
-            }
+                    <style>
+                        #line<?php echo $t - 1; ?> {
+                            background: <?php echo $t_kolor_b ?>;
+                            background: linear-gradient(90deg, <?php echo $t_kolor_b ?> 15%, <?php echo $t_kolor ?> 85%);
+                        }
+                    </style>
 
-            // Create a Timeline
-            var timeline = new vis.Timeline(container, items, options);
-            this.timeline.moveTo(Date.now());
+
+            <?php
+                endwhile;
+            endif;
+
+            ?>
+
+            <style>
+                .event:last-child .line{
+                    background: linear-gradient(90deg, <?php echo $t_kolor?> 15%, #FBFBFB 85%) !important;
+                }
+            </style>
+
+
+        </div>
+        <script>
+            $(document).ready(function() {
+                $('.timeline-slider').slick({
+                    arrows: false,
+                    initialSlide: 3,
+                    slidesToShow: 1,
+                    variableWidth: true,
+                    infinite: false,
+                    centerMode: true
+
+                });
+            });
         </script>
     </section>
 
