@@ -230,7 +230,7 @@ get_header();
 
 
                     <div class="event">
-                        <a href="<?php the_sub_field('t_link'); ?>" class="info-box">
+                        <a href="<?php the_sub_field('t_link'); ?>" class="info-box" id="box<?php echo $t; ?>">
                             <img src="<?php the_sub_field('t_obrazek'); ?>" />
                             <div class="middle">
                                 <div class="text">
@@ -238,7 +238,7 @@ get_header();
                                     <p><?php the_sub_field('t_opis'); ?></p>
                                 </div>
                             </div>
-                            <div class="bottom" id="bottom<?php echo $t; ?>" style="background: <?php echo $t_kolor ?> ">
+                            <div class="bottom" style="background: <?php echo $t_kolor ?> ">
                                 <div class="text">
                                     <?php the_sub_field('t_miejsce'); ?>
                                 </div>
@@ -251,7 +251,7 @@ get_header();
                         </div>
                         <div class="line" id="line<?php echo $t; ?>"></div>
                         <style>
-                            #bottom<?php echo $t; ?>:after{
+                            #box<?php echo $t; ?>:after{
                                 border-top: 30px solid <?php echo $t_kolor ?> !important;
                             }
                             #line<?php echo $t - 1; ?> {
