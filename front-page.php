@@ -266,15 +266,12 @@ get_header();
             endif;
 
             ?>
-
-            <style>
-                .event:last-child .line{
-                    background: linear-gradient(90deg, <?php echo $t_kolor?> 15%, #FBFBFB 85%) !important;
-                }
-            </style>
-
-
         </div>
+        <style>
+            .event:last-child .line {
+                background: linear-gradient(90deg, <?php echo $t_kolor ?> 15%, #FBFBFB 85%) !important;
+            }
+        </style>
         <script>
             $(document).ready(function() {
                 $('.timeline-slider').slick({
