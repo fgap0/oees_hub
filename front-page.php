@@ -32,7 +32,7 @@ get_header();
 
         </div>
         <div class="slider-button">
-            <div class="text">Rekrutacja</div>
+            <div class="text">ZGŁOŚ SIĘ</div>
         </div>
     </section>
     <div id="rekrutacja">
@@ -92,7 +92,7 @@ get_header();
     <?php if (get_field('for_obrazek')) { ?>
 
         <section id="for">
-            <div class="container-fluid">
+            <div class="container">
                 <div class="row">
 
                     <img src="<?php the_field('for_obrazek'); ?>" />
@@ -108,7 +108,7 @@ get_header();
             <div class="row">
                 <div class="col-12 section-head">
                     <hr />
-                    <h2>Co oferujemy</h2>
+                    <h2>Co oferujemy?</h2>
                 </div>
             </div>
             <div class="row">
@@ -150,7 +150,7 @@ get_header();
     <?php if (get_field('for3_obrazek')) { ?>
 
         <section id="for3">
-            <div class="container-fluid">
+            <div class="container">
                 <div class="row">
 
                     <img src="<?php the_field('for3_obrazek'); ?>" />
@@ -191,7 +191,7 @@ get_header();
     <?php if (get_field('for2_obrazek')) { ?>
 
         <section id="for2">
-            <div class="container-fluid">
+            <div class="container">
                 <div class="row">
 
                     <img src="<?php the_field('for2_obrazek'); ?>" />
@@ -218,7 +218,7 @@ get_header();
         <div class="timeline-slider">
 
             <?php
-            $glowny=0;
+            $glowny = 0;
             $t = 0;
             if (have_rows('timeline')) :
 
@@ -227,15 +227,17 @@ get_header();
                     $t++;
                     $t_kolor_b = $t_kolor;
                     $t_kolor = get_sub_field('t_kolor');
-                    if(get_sub_field('t_glowny')){
-                        $glowny = $t-1;
+                    if (get_sub_field('t_glowny')) {
+                        $glowny = $t - 1;
                     }
-                    ?>
+            ?>
 
 
                     <div class="event">
                         <a href="<?php the_sub_field('t_link'); ?>" class="info-box" id="box<?php echo $t; ?>">
-                            <img src="<?php the_sub_field('t_obrazek'); ?>" />
+                            <div class="img">
+                                <img src="<?php the_sub_field('t_obrazek'); ?>" />
+                            </div>
                             <div class="middle">
                                 <div class="text">
                                     <h3><?php the_sub_field('t_naglowek'); ?></h3>
@@ -255,9 +257,10 @@ get_header();
                         </div>
                         <div class="line" id="line<?php echo $t; ?>"></div>
                         <style>
-                            #box<?php echo $t; ?>:after{
+                            #box<?php echo $t; ?>:after {
                                 border-top: 30px solid <?php echo $t_kolor ?> !important;
                             }
+
                             #line<?php echo $t - 1; ?> {
                                 background: <?php echo $t_kolor_b ?>;
                                 background: linear-gradient(90deg, <?php echo $t_kolor_b ?> 15%, <?php echo $t_kolor ?> 85%);
@@ -284,7 +287,7 @@ get_header();
             $(document).ready(function() {
                 $('.timeline-slider').slick({
                     arrows: false,
-                    initialSlide: <?php echo $glowny;?>,
+                    initialSlide: <?php echo $glowny; ?>,
                     slidesToShow: 1,
                     variableWidth: true,
                     infinite: false,

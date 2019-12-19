@@ -177,7 +177,7 @@ h4 {
 				margin-bottom: 20px;
 			}
 			.text {
-				color: #fff;
+				color: #0b1e2c;
 				font-size: 3rem;
 			}
 		}
@@ -254,6 +254,7 @@ h4 {
 	.wrapper {
 		padding: 20px 15%;
 		.text {
+			color: #111;
 			font-size: 1.1rem;
 			text-align: center;
 		}
@@ -347,37 +348,57 @@ h4 {
 #for,
 #for2,
 #for3 {
+	margin-top:70px;
+	margin-bottom:70px;
 	img {
 		width: 100%;
 		height: auto;
 	}
 }
 
+#for{
+	margin-top:-90px;
+}
+#for3{
+	margin-bottom:-40px;
+}
+#for2{
+	margin-top:-30px;
+	margin-bottom:-30px;
+}
+
 #oferta {
+	width:1140px;
+	margin:auto;
 	background: $c-main;
 	color: #fff;
 	padding-bottom: 50px;
 	@include md {
-		height: 650px;
+		height: 550px;
 	}
 	.wrapper {
-		margin-top: 40px;
+		margin-top: 20px;
 		display: block;
 		color: #fff;
 		@include md {
 			position: relative;
 		}
 		.text-wrap {
+			margin-left: 30px;
 			height: 160px;
 			background: none;
-			border: 4px solid #fff;
 			@include md {
 				z-index: 1;
 				position: absolute;
-				width: 90%;
+				width: 300px;
 			}
 
 			.text {
+				position: absolute;
+				top: 50%;
+				transform: translate(0, -50%);
+				width: 100%;
+				text-align: center;
 				padding: 20px;
 				font-size: 2.4rem;
 				text-transform: uppercase;
@@ -390,8 +411,9 @@ h4 {
 			@include md {
 				position: absolute;
 				left: 30px;
-				top: 120px;
-				width: 90%;
+				top: 140px;
+				width: 300px;
+				height: 300px;
 			}
 		}
 	}
@@ -425,8 +447,11 @@ h4 {
 }
 
 #logotypy-bottom {
-	margin-top: 80px;
+	margin-top: 60px;
 	margin-bottom: 60px;
+	p {
+		color: #0b1e2c !important;
+	}
 	hr {
 		height: 0;
 		border-top: 1px solid #ffffff;
@@ -438,9 +463,27 @@ h4 {
 	.wrapper {
 		display: flex;
 		justify-content: space-evenly;
+		flex-direction: column;
+		&:last-child{
+			margin-bottom:-40px; 
+		}
 		img {
-			width: 250px;
+			width: 80%;
+			margin:auto;
+			margin-bottom:20px;
+			display:block;
 			height: 90px;
+
+		}
+
+		@include md {
+			display: flex;
+			justify-content: space-evenly;
+			flex-direction: row;
+			img {
+				width: auto;
+				height: 90px;
+			}
 		}
 	}
 }
@@ -466,8 +509,9 @@ h4 {
 
 #timeline {
 	margin-top: 100px;
+	padding-top:50px;
 	background: #fbfbfb;
-	padding-bottom: 140px;
+	padding-bottom: 50px;
 	.section-head {
 		hr {
 			border-color: $c-main;
@@ -850,11 +894,13 @@ h4 {
 
 #logotypy-footer {
 	border-top: 1px solid rgba(11, 30, 44, 0.1);
+
 	.wrapper {
 		padding: 20px 15px;
 		.text {
 			font-size: 1.1rem;
 			text-align: center;
+			color: #0b1e2c !important;
 		}
 		.logotypy {
 			padding-top: 15px;
@@ -879,19 +925,26 @@ h4 {
 		height: 600px;
 		.info-box {
 			background: #fff;
-			display:block;
+			display: block;
 			height: 400px;
 			width: 320px;
 			position: absolute;
 			top: 0;
 			box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.2);
 			z-index: 2;
-			img {
+			.img {
 				position: absolute;
 				top: 0;
-				height: 170px;
-				width: 100%;
-				object-fit: cover;
+				left: 50%;
+				transform: translate(-50%, 0);
+				width: 90%;
+				height: 200px;
+				img {
+					height: 100%;
+					width: auto;
+					margin: auto;
+					display: block;
+				}
 			}
 			.middle {
 				position: absolute;
@@ -923,12 +976,12 @@ h4 {
 				.text {
 					font-size: 1.6rem;
 					color: #fff;
-					text-align:right;
-					width:85%;
-					position:absolute;
-					top:50%;
-					left:50%;
-					transform:translate(-50%,-50%);
+					text-align: right;
+					width: 85%;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
 				}
 			}
 			&:after {
@@ -974,7 +1027,22 @@ h4 {
 			z-index: 1;
 			height: 15px;
 			background: purple;
-			box-shadow:3px 3px 5px 0px rgba(0, 0, 0, 0.2), inset 0px 0px 10px 3px rgba(0, 0, 0, 0.15)
+			box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.2), inset 0px 0px 10px 3px rgba(0, 0, 0, 0.15);
 		}
 	}
 }
+
+#timeline,
+#oferta {
+	.section-head {
+		hr {
+			width: 360px;
+			margin-top:5px;
+		}
+		h2 {
+			font-size: 2.6rem;
+			text-transform: uppercase;
+		}
+	}
+}
+
