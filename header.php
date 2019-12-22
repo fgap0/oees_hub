@@ -30,7 +30,12 @@
 			<div class="row">
 				<div class="col-2 col-logo">
 					<div class="logo" style="margin-left:100px; margin-top:20px;">
-						<?php the_custom_logo(); ?>
+						<?php if (!is_front_page()) { ?>
+							<?php the_custom_logo(); ?>
+						<?php } else { ?>
+							<img style="width:90px" src="https://oees.pl/hub/wp-content/uploads/2019/12/OEES_malopolska_hub_blue.png" />
+						<?php } ?>
+
 					</div>
 				</div>
 			</div>
@@ -170,12 +175,12 @@
 
 			<?php if (!is_front_page()) { ?>
 				<style>
-.site-header{
-	position:static;
-	background:#0B1E2C;
-	margin-bottom:50px;
-	height:160px;
-}
+					.site-header {
+						position: static;
+						background: #0B1E2C;
+						margin-bottom: 50px;
+						height: 160px;
+					}
 				</style>
 			<?php } ?>
 

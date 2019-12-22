@@ -53,14 +53,14 @@ get_header();
 								<?php echo wp_trim_words(get_the_content(), 40, '...'); ?>
 							</div>
 							<div class="bottom">
-								<div class="date">Opublikowano: <b><?php the_date(); ?></b></div>
+								<div class="date">Opublikowano: <b><?php echo get_the_date(); ?></b></div>
 								<a class="button" href="<?php the_permalink(); ?>">WIĘCEJ</a>
 							</div>
 						</div>
 					</div>
 
 				</article> <?php //row 
-									?>
+							?>
 
 
 

@@ -177,7 +177,7 @@ function custom_styles()
 {
 	wp_enqueue_style('bootstrap_css', "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css", NULL, '4.3.1');
 	wp_enqueue_style('slick_css', "https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css", NULL, '1.8.1');
-	wp_enqueue_style('main_css', get_template_directory_uri() . '/dist/css/main.min.css', NULL, '1.1.0');
+	wp_enqueue_style('main_css', get_template_directory_uri() . '/dist/css/main.min.css', NULL, '1.1.1');
 }
 add_action('wp_enqueue_scripts', 'custom_styles');
 

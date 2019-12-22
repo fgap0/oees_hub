@@ -12,28 +12,34 @@ get_header();
             if (have_rows('slider')) :
                 while (have_rows('slider')) : the_row(); ?>
 
-                    <div class="slide" style=" background-image:url('<?php the_sub_field('slider_obrazek'); ?>')">
 
-                        <?php if (get_sub_field('slider_tekst')) { ?>
-                            <div class="wrapper">
-                                <hr />
-                                <div class="text">
-                                    <?php the_sub_field('slider_tekst'); ?>
+                    <?php if (wp_is_mobile() & get_sub_field('slider_obrazek_m')) { ?>
+                        <div class="slide" style=" background-image:url('<?php the_sub_field('slider_obrazek_m'); ?>')">
+                        <?php } else { ?>
+                            <div class="slide" style=" background-image:url('<?php the_sub_field('slider_obrazek'); ?>')">
+                            <?php } ?>
+
+
+                            <?php if (get_sub_field('slider_tekst')) { ?>
+                                <div class="wrapper">
+                                    <hr />
+                                    <div class="text">
+                                        <?php the_sub_field('slider_tekst'); ?>
+                                    </div>
                                 </div>
+                            <?php } ?>
+
                             </div>
-                        <?php } ?>
 
-                    </div>
-
-            <?php
+                    <?php
                 endwhile;
             endif;
-            ?>
+                    ?>
 
-        </div>
-        <div class="slider-button">
-            <div class="text">ZGŁOŚ SIĘ</div>
-        </div>
+                        </div>
+                        <div class="slider-button">
+                            <div class="text">ZGŁOŚ SIĘ</div>
+                        </div>
     </section>
     <div id="rekrutacja">
         <div class="wrapper">
@@ -95,7 +101,11 @@ get_header();
             <div class="container">
                 <div class="row">
 
-                    <img src="<?php the_field('for_obrazek'); ?>" />
+                    <?php if (wp_is_mobile() & get_field('for_obrazek_m')) { ?>
+                        <img src="<?php the_field('for_obrazek_m'); ?>" />
+                    <?php } else { ?>
+                        <img src="<?php the_field('for_obrazek'); ?>" />
+                    <?php } ?>
 
                 </div>
             </div>
@@ -153,7 +163,11 @@ get_header();
             <div class="container">
                 <div class="row">
 
-                    <img src="<?php the_field('for3_obrazek'); ?>" />
+                    <?php if (wp_is_mobile() & get_field('for3_obrazek_m')) { ?>
+                        <img src="<?php the_field('for3_obrazek_m'); ?>" />
+                    <?php } else { ?>
+                        <img src="<?php the_field('for3_obrazek'); ?>" />
+                    <?php } ?>
 
                 </div>
             </div>
@@ -194,7 +208,11 @@ get_header();
             <div class="container">
                 <div class="row">
 
-                    <img src="<?php the_field('for2_obrazek'); ?>" />
+                    <?php if (wp_is_mobile() & get_field('for2_obrazek_m')) { ?>
+                        <img src="<?php the_field('for2_obrazek_m'); ?>" />
+                    <?php } else { ?>
+                        <img src="<?php the_field('for2_obrazek'); ?>" />
+                    <?php } ?>
 
                 </div>
             </div>
