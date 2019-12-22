@@ -210,6 +210,9 @@ get_header();
 
                     <?php if (wp_is_mobile() && get_field('for2_obrazek_m')) { ?>
                         <img src="<?php the_field('for2_obrazek_m'); ?>" />
+                        <script>
+                            console.log('mob');
+                        </script>
                     <?php } else { ?>
                         <img src="<?php the_field('for2_obrazek'); ?>" />
                     <?php } ?>
