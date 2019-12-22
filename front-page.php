@@ -13,7 +13,7 @@ get_header();
                 while (have_rows('slider')) : the_row(); ?>
 
 
-                    <?php if (wp_is_mobile() & get_sub_field('slider_obrazek_m')) { ?>
+                    <?php if (wp_is_mobile() && get_sub_field('slider_obrazek_m')) { ?>
                         <div class="slide" style=" background-image:url('<?php the_sub_field('slider_obrazek_m'); ?>')">
                         <?php } else { ?>
                             <div class="slide" style=" background-image:url('<?php the_sub_field('slider_obrazek'); ?>')">
@@ -101,7 +101,7 @@ get_header();
             <div class="container">
                 <div class="row">
 
-                    <?php if (wp_is_mobile() & get_field('for_obrazek_m')) { ?>
+                    <?php if (wp_is_mobile() && get_field('for_obrazek_m')) { ?>
                         <img src="<?php the_field('for_obrazek_m'); ?>" />
                     <?php } else { ?>
                         <img src="<?php the_field('for_obrazek'); ?>" />
@@ -163,7 +163,7 @@ get_header();
             <div class="container">
                 <div class="row">
 
-                    <?php if (wp_is_mobile() & get_field('for3_obrazek_m')) { ?>
+                    <?php if (wp_is_mobile() && get_field('for3_obrazek_m')) { ?>
                         <img src="<?php the_field('for3_obrazek_m'); ?>" />
                     <?php } else { ?>
                         <img src="<?php the_field('for3_obrazek'); ?>" />
@@ -208,7 +208,7 @@ get_header();
             <div class="container">
                 <div class="row">
 
-                    <?php if (wp_is_mobile() & get_field('for2_obrazek_m')) { ?>
+                    <?php if (wp_is_mobile() && get_field('for2_obrazek_m')) { ?>
                         <img src="<?php the_field('for2_obrazek_m'); ?>" />
                     <?php } else { ?>
                         <img src="<?php the_field('for2_obrazek'); ?>" />
